@@ -12,7 +12,8 @@ namespace HomeWork
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            var dowork = new DoWork();
+            dowork.doWork();
             Console.ReadLine();
         }
     }

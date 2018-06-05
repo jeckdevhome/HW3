@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace HomeWork
 {
-    public delegate void RetRestoCalc(double value1, double value2);
+    public delegate void RetRestoCalc();
     interface ICalc
     {
         double Add(double value1, double value2);
         double Extract(double value1, double value2);
+        double Multiplay(double value1, double value2);
+        double Devide(double value1, double value2);
 
     }
 }

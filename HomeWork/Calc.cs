@@ -12,17 +12,27 @@ namespace HomeWork
         {
             
         }
-        public double result, value11, value22;
+        public double result; //value11, value22;
 
         public double Extract(double value11, double value22)
         {
-        result = value11 - value22;
+            result = value11 - value22;
             return result;
         }
 
         public double Add(double value11, double value22)
         {
             result = value11 + value22;
+            return result;
+        }
+        public double Multiplay(double value1, double value2)
+        {
+            result = value1 * value2;
+            return result;
+        }
+        public double Devide(double value1, double value2)
+        {
+            result = value1 / value2;
             return result;
         }
         
