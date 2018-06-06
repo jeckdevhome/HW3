@@ -14,6 +14,7 @@ namespace HomeWork
         {
             var dowork = new DoWork();
             dowork.doWork();
+
             Console.ReadLine();
         }
     }
