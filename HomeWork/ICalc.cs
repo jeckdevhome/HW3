@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace HomeWork
 {
-    public delegate void RetRestoCalc();
     interface ICalc
     {
         double Add(double value1, double value2);

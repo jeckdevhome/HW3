@@ -8,18 +8,12 @@ namespace HomeWork
 {
     class Calc : ICalc
     {
-        public Calc()
-        {
-            
-        }
-        public double result; //value11, value22;
-
+        public double result; 
         public double Extract(double value11, double value22)
         {
             result = value11 - value22;
             return result;
         }
-
         public double Add(double value11, double value22)
         {
             result = value11 + value22;
@@ -35,6 +29,5 @@ namespace HomeWork
             result = value1 / value2;
             return result;
         }
-        
     }
 }
