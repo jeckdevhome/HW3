@@ -16,7 +16,6 @@ namespace Interface_Print
             var printer = new Printer();
             printer.Print(canon);
             printer.Print(mobprin);
-
             Console.ReadLine();
         }
     }
