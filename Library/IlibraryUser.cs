@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class Program
+    interface IlibraryUser
     {
-        static void Main(string[] args)
-        {
-
-
-            Console.ReadLine();
-        }
+        void AddBook();
+        void RemoveBook();
+        void BookInfo();
+        void BooksCount();
     }
 }
