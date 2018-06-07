@@ -13,19 +13,31 @@ namespace Morze
     //3.посигнализировать
     class Program
     {
+        public void Beep()
+        {
+            if 
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello");
             Console.WriteLine("Enter same text to convert in morze");
             var mydictionary = new Dictionare_Morze();
+            mydictionary.dowork();
+            //mydictionary.MyDictionary.Equals('h');
             string myword = Convert.ToString(Console.ReadLine());
             char[] tomorze = myword.ToCharArray();
-            foreach(var item in tomorze)
+            for (int i = 0; i < tomorze.Length; i++)
             {
-
+                   if (mydictionary.MyDictionary.ContainsKey(tomorze[i]))
+                   {
+                        Console.WriteLine("the tes to find <Tkey>");
+                   }
+                   else
+                   {
+                    Console.WriteLine("not use");
+                   }
             }
             
-
             Console.ReadLine();
         }
     }

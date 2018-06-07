@@ -8,10 +8,11 @@ namespace Morze
 {
     class Dictionare_Morze
     {
+        public Dictionary<char, int[]> MyDictionary = new Dictionary<char, int[]>();
         public void dowork()
         { 
 
-        Dictionary<char, int[]> MyDictionary = new Dictionary<char, int[]>();
+        //Dictionary<char, int[]> MyDictionary = new Dictionary<char, int[]>();
             MyDictionary.Add('a', new int[]{ 0,1});
             MyDictionary.Add('b', new int[]{ 1,0,0,0});
             MyDictionary.Add('c', new int[]{ 1,0,1,0});
