@@ -13,10 +13,6 @@ namespace Morze
     //3.посигнализировать
     class Program
     {
-        public void Beep()
-        {
-            if 
-        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hello");
@@ -28,16 +24,30 @@ namespace Morze
             char[] tomorze = myword.ToCharArray();
             for (int i = 0; i < tomorze.Length; i++)
             {
-                   if (mydictionary.MyDictionary.ContainsKey(tomorze[i]))
-                   {
-                        Console.WriteLine("the tes to find <Tkey>");
-                   }
-                   else
-                   {
-                    Console.WriteLine("not use");
-                   }
+                if (mydictionary.MyDictionary.ContainsKey(tomorze[i])) //если текст введен на англ языке будет выдавать сигнал 
+                {
+                    //если ключи совподают дальше перебираем какой звук выдать
+                    // к примеру  "а" содержит один кароткий и один длинный
+                    Console.WriteLine("\nwe find <Tkey> {0}", tomorze[i]);
+                    var intByteArray = mydictionary.MyDictionary[tomorze[i]];
+                    for (int j = 0; j < intByteArray.Length; j++)
+                    {
+                        if (intByteArray[j] == 0)
+                        {
+                            Console.Write(".");
+                            Console.Beep(500, 400);
+                            continue;
+                        }
+                        Console.Write("_");
+                        Console.Beep(500,600);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nnot use");
+                    Console.Beep(700, 900);
+                }
             }
-            
             Console.ReadLine();
         }
     }
