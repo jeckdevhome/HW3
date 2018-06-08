@@ -22,32 +22,32 @@ namespace Morze
             //mydictionary.MyDictionary.Equals('h');
             string myword = Convert.ToString(Console.ReadLine());
             char[] tomorze = myword.ToCharArray();
-            for (int i = 0; i < tomorze.Length; i++)
-            {
-                if (mydictionary.MyDictionary.ContainsKey(tomorze[i])) //если текст введен на англ языке будет выдавать сигнал 
+                for (int i = 0; i < tomorze.Length; i++)
                 {
-                    //если ключи совподают дальше перебираем какой звук выдать
-                    // к примеру  "а" содержит один кароткий и один длинный
-                    Console.WriteLine("\nwe find <Tkey> {0}", tomorze[i]);
-                    var intByteArray = mydictionary.MyDictionary[tomorze[i]];
-                    for (int j = 0; j < intByteArray.Length; j++)
+                    if (mydictionary.MyDictionary.ContainsKey(tomorze[i])) //если текст введен на англ языке будет выдавать сигнал 
                     {
-                        if (intByteArray[j] == 0)
+                        //если ключи совподают дальше перебираем какой звук выдать
+                        // к примеру  "а" содержит один кароткий и один длинный
+                        Console.WriteLine("\nwe find <Tkey> {0}", tomorze[i]);
+                        var intByteArray = mydictionary.MyDictionary[tomorze[i]];
+                        for (int j = 0; j < intByteArray.Length; j++)
                         {
-                            Console.Write(".");
-                            Console.Beep(500, 400);
-                            continue;
+                            if (intByteArray[j] == 0)
+                            {
+                                Console.Write(".");
+                                Console.Beep(500, 400);
+                                continue;
+                            }
+                            Console.Write("_");
+                            Console.Beep(500, 600);
                         }
-                        Console.Write("_");
-                        Console.Beep(500,600);
                     }
-                }
-                else
-                {
-                    Console.WriteLine("\nnot use");
-                    Console.Beep(700, 900);
-                }
-            }
+                    else
+                    {
+                        Console.WriteLine("\nprobel");
+                        Console.Beep(700, 1000);
+                    }
+                } 
             Console.ReadLine();
         }
     }
