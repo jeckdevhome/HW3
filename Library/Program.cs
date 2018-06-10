@@ -11,7 +11,9 @@ namespace Library
         static void Main(string[] args)
         {
 
-
+            LibraryUser TOM = new LibraryUser("Tommy", "Finger", 001, 5, 102);
+            TOM.BookInfo();
+            TOM.Show();
             Console.ReadLine();
         }
     }

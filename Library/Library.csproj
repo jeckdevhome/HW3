@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Books.cs" />
     <Compile Include="IlibraryUser.cs" />
     <Compile Include="LibraryUser.cs" />
     <Compile Include="Program.cs" />

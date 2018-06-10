@@ -27,7 +27,6 @@ namespace Morze
                     if (mydictionary.MyDictionary.ContainsKey(tomorze[i])) //если текст введен на англ языке будет выдавать сигнал 
                     {
                         //если ключи совподают дальше перебираем какой звук выдать
-                        // к примеру  "а" содержит один кароткий и один длинный
                         Console.WriteLine("\nwe find <Tkey> {0}", tomorze[i]);
                         var intByteArray = mydictionary.MyDictionary[tomorze[i]];
                         for (int j = 0; j < intByteArray.Length; j++)

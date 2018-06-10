@@ -20,8 +20,9 @@ namespace Library
             BooksLimit = booksLimit;
             Phone = phone;
         }
-        string FirstName, LastName; int Id, Phone; static int BooksLimit = 0;
-        public string[] BookList = new string[BooksLimit]; //{"Kykish", "Myakish", "Bilbo", "LEGO: Manual"}; 
+        string FirstName, LastName; int Id, Phone;
+        static int BooksLimit = 0;
+        private string[] BookList = new string[BooksLimit] {"Kykish", "Myakish", "Bilbo", "LEGO: Manual"}; 
         public string this[int index_var]
         {
             get
@@ -46,15 +47,28 @@ namespace Library
             }
         } // indexer
         string EntrBookNme; //need read from keyboard, will do to be as a method
+        public void ConvertName()
+        {
+            Console.WriteLine("Enter Name of book");
+            EntrBookNme = Convert.ToString(Console.ReadLine());
+        }
+        public void Show()
+        {
+            foreach(var item in BookList)
+            {
+                Console.WriteLine("book name: {0}", item);
+            }
+            
+        }
         public void AddBook()
         {
             Array.Resize(ref BookList, BookList.Length + 1);
-            BookList[BookList.Length - 1] = EntrBookNme;
+            BookList[BookList.Length - 1] = "Books";
 
         }
         public void BookInfo()
         {
-
+            Console.WriteLine(BookList.ToString());
         }
         public void BooksCount()
         {
