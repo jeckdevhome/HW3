@@ -18,7 +18,7 @@ namespace List_Book
             library.Add("steel pats", "Garry Garison");
             foreach (var item in library.ShowAll())
             {
-                Console.WriteLine("\n Books{0} {1}", item.Name, item.Author);
+                Console.WriteLine("\n Books: {0} {1}", item.Name, item.Author);
             }
             Console.ReadLine();
         }

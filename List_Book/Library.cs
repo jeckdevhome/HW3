@@ -15,6 +15,7 @@ namespace List_Book
             books.Add(new Books {Name = "Azbyka", Author = "Nacionale" });
             books.Add(new Books {Name = "Tom", Author = "Noname" });
         }
+
         public void Add(string name, string author)
         {
             books.Add(new Books { Name = name, Author = author });

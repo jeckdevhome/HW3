@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class LibraryUser : IlibraryUser
+    public class LibraryUser : IlibraryUser
     {
-        public LibraryUser()
-        {
+        //public LibraryUser()
+        //{
 
-        }
+        //}
         public LibraryUser(string firstName, string lastName, int id, int booksLimit, int phone)
         {
             FirstName = firstName;
@@ -19,10 +19,15 @@ namespace Library
             Id = id;
             BooksLimit = booksLimit;
             Phone = phone;
+            BookList[0] = "Kykish";
+            BookList[1] = "Myakish";
+            BookList[2] = "Bilbo";
+            BookList[3] = "LEGO: Manual";
+            BookList[4] = "Ali";
         }
         string FirstName, LastName; int Id, Phone;
-        static int BooksLimit = 0;
-        private string[] BookList = new string[BooksLimit] {"Kykish", "Myakish", "Bilbo", "LEGO: Manual"}; 
+        public int BooksLimit;
+        string[] BookList = new string[5]; 
         public string this[int index_var]
         {
             get
@@ -48,7 +53,7 @@ namespace Library
         } // indexer
         string EntrBookNme; //need read from keyboard, will do to be as a method
         public void ConvertName()
-        {
+        { 
             Console.WriteLine("Enter Name of book");
             EntrBookNme = Convert.ToString(Console.ReadLine());
         }
@@ -62,8 +67,9 @@ namespace Library
         }
         public void AddBook()
         {
+            EntrBookNme = Convert.ToString(Console.ReadLine());
             Array.Resize(ref BookList, BookList.Length + 1);
-            BookList[BookList.Length - 1] = "Books";
+            BookList[BookList.Length - 1] = EntrBookNme;
 
         }
         public void BookInfo()
@@ -72,7 +78,8 @@ namespace Library
         }
         public void BooksCount()
         {
-
+            string AllBooks = BookList.Length.ToString();
+            Console.WriteLine("Books count: {0}", AllBooks);
         }
         public void RemoveBook()
         {

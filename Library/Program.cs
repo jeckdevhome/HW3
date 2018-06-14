@@ -12,8 +12,12 @@ namespace Library
         {
 
             LibraryUser TOM = new LibraryUser("Tommy", "Finger", 001, 5, 102);
+            LibraryUser TiM = new LibraryUser("Tim", "leg", 003, 3, 103);
             TOM.BookInfo();
             TOM.Show();
+            TOM.BooksCount();
+            TiM.BooksCount();
+            TiM.Show();
             Console.ReadLine();
         }
     }
