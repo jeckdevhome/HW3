@@ -7,17 +7,31 @@ using System.IO;
 
 namespace ListBook_dbText
 {
-    class Logger
+     class Logger
     {
         
-        public void LoggerWrite()
+        
+        public static void LoggerWrite(book = new Books)
         {
-            string mypath = @"c:\Log.txt";
-            StreamWriter streamWriter = new StreamWriter(mypath, Encoding.UTF8);
+            
+                
+            string mypath = @"Log.txt";
+            using (StreamWriter streamWriter = new StreamWriter(mypath))
+            {
+                foreach (var item in value)
+                {
+                    streamWriter.Write(item);
+                }
+                
+            }
         }
-        public void LoggerRead()
+        public static void LoggerRead(object value)
         {
-
+            string mypath = @"Log.txt";
+            using (StreamReader streamReader = new StreamReader(mypath))
+            {
+                mypath = streamReader.ReadToEnd();
+            }
         }
     }
 }

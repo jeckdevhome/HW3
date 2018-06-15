@@ -12,17 +12,31 @@ namespace ListBook_dbText
         {
             books = new List<Books>();
             books.Add(new Books { Name = "Babauko", Author = "Me" });
+            books.Add(new Books { Name = "Pinokio", Author = "Me and other" });
+            foreach (var item in books)
+            {
+                //Logger.LoggerWrite(item);
+            }
         }
-        private List<Books> books { get; set; }
+        public List<Books> books { get; set; }
 
         public void AddBook(string name, string author)
         {
             books.Add(new Books { Name = name, Author = author });
+            foreach(var item in books)
+            {
+                Logger.LoggerWrite(item);
+            }
+            
         }
         public void RemoveBook(string name, string author)
         {
             Books foundbook = books.Find(x => x.Author == author && x.Name == name);
             books.Remove(foundbook);
+            foreach (var item in books)
+            {
+                Logger.LoggerWrite(item);
+            }
         }
         public List<Books> FindByName(string name)
         {
@@ -34,7 +48,9 @@ namespace ListBook_dbText
         }
         public List<Books> ShowAll()
         {
+            
             return books;
+            
         }
         public bool CheckIfExist(string name, string author)
         {
