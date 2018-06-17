@@ -11,11 +11,13 @@ namespace ListBook_dbText
         static void Main(string[] args)
         {
             var user1 = new Library();
-            user1.AddBook("Bilbo","Begens");
-            user1.ShowAll();
+            var use = new Logger();
+            user1.AddBook("Bilbo ","Begens ");
+            //user1.ShowAll();
             
             foreach(var item in user1.ShowAll())
             {
+                Logger.LoggerWrite(item.Author, item.Name);
                 Console.WriteLine("Book: {0}, {1}", item.Author, item.Name);
             }
             
