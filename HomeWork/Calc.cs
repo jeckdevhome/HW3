@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork
 {
-    class Calc : ICalc
+     public class Calc : ICalc
     {
         public double result; 
         public double Extract(double value11, double value22)

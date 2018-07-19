@@ -79,7 +79,7 @@ namespace HomeWork
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine("Wrong types");
-                this.RreadNumbers();
+                this.RreadNumbers();    
             }
 
         }

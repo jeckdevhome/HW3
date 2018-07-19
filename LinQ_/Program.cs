@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_List_Json
+namespace LinQ_
 {
-    interface ILibrary
+    class Program
     {
-        void Add();
-        void Remove();
-        List<Books> ShowAll();
+        static void Main(string[] args)
+        {
+
+        }
     }
 }

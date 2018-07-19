@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_List_Json
+namespace LinQ_.Domain
 {
-    interface ILibrary
+    public class Group
     {
-        void Add();
-        void Remove();
-        List<Books> ShowAll();
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

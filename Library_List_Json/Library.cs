@@ -8,7 +8,8 @@ namespace Library_List_Json
 {
     class Library : ILibrary
     {
-        public List<Books> Books { get; set; }
+
+        public List<Books> books { get; set; } = new List<Books>();
         Logger logger = new Logger();
         public Library()
         {
@@ -20,12 +21,16 @@ namespace Library_List_Json
             string enterValue = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Enter book Author");
             string enterValue2 = Convert.ToString(Console.ReadLine());
-            Books.Add(new Books(enterValue, enterValue2));
-            //logger.writelog(Books);
+            books.Add( new Books (enterValue, enterValue2));   //ошибка компиляции
+            logger.writelog(books);
         }
         public void Remove()
         {
 
+        }
+        public  List<Books> ShowAll()
+        {
+            return books;
         }
 
     }

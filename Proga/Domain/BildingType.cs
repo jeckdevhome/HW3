@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_List_Json
+namespace Proga
 {
-    interface ILibrary
+    class BildingType
     {
-        void Add();
-        void Remove();
-        List<Books> ShowAll();
+        public int Id { get; set; }
+        public string BildingName { get; set; }
+
+
     }
 }

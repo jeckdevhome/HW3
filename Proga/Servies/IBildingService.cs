@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library_List_Json
+namespace Proga.Servies
 {
-    interface ILibrary
+    interface IBildingService
     {
-        void Add();
-        void Remove();
-        List<Books> ShowAll();
+        List<Bilding> GetAll();
     }
 }
