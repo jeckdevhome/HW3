@@ -27,9 +27,9 @@ namespace LinQ_.Reposytory
 
         public Person GetPersonById(int id)
         {
-           //return from person in _context.Persons
+            //return from person in _context.Persons
 
-            _context.Person.
+            _context.Person.SelectMany(Person.Equals(objA).id);
                  
         }
     }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Proga.Data
 {
-     class dbcontext : DbContext
+     class Dbcontext : DbContext
     {
         public DbSet<Bilding> Bildings { get; set; }
-        public DbSet<BildingType> bildingTypes { get; set; }
+        public DbSet<BildingType> BildingTypes { get; set; }
     }
 }

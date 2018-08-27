@@ -12,7 +12,7 @@ namespace Proga.Servies
         
         public List<Bilding> GetAll()
         {
-            var context = new dbcontext();
+            var context = new Dbcontext();
             var allBuild = context.Bildings.ToList();
             //var allBuild = context.Bildings.Include("Bildingtype").ToList<Bilding>;
 

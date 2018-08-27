@@ -1,0 +1,27 @@
+﻿@using BookStoreMvc.Models
+
+@model BookStoreMvc.Models.BookViewModel
+@{
+    ViewBag.Title = "UpdateBook";
+}
+
+<h2>UpdateBook</h2>
+<h3>Book Number: @Model.BookNumber</h3>
+
+@using (Html.BeginForm("Update Book", "Book"))
+{
+    @Html.HiddenFor(_ => _.BookNumber);
+
+    @Html.LabelFor(_ => _.Name);
+    @Html.TextBoxFor(_ => _.Name);
+    <br />
+    @Html.LabelFor(_ => _.Author);
+    @Html.TextBoxFor(_ => _.Author);
+    <br />
+    @Html.LabelFor(_ => _.Price);
+    @Html.TextBoxFor(_ => _.Price);
+    <br />
+    <input type="submit" value="Sumbit" />
+}
+
+

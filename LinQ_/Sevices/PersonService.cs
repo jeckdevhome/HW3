@@ -17,8 +17,8 @@ namespace LinQ_.Sevices
         }
         public List<Person> GetFilteredPersons()
         {
-
-            return;
+            var listper = "";
+            return listper;
         }
 
 

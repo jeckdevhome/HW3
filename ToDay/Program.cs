@@ -30,11 +30,12 @@ namespace ToDay
                         || item.Birthdate.Day == DateTime.Today.Day - 4
                         || item.Birthdate.Day == DateTime.Today.Day - 5))
                     result.Add(item);
-                Console.WriteLine("user: {0}, and date {1} ", item.UserName, item.Birthdate);
+                 
+                Console.WriteLine("ALL user: {0}, and date {1} ", item.UserName, item.Birthdate);
                 }
             foreach (var item in result)
             {
-                Console.WriteLine("In Result user: {0}, and date {1} ", item.UserName, item.Birthdate);
+                //Console.WriteLine("In Result user: {0}, and date {1} ", item.UserName, item.Birthdate);
             }
 
             Console.WriteLine();

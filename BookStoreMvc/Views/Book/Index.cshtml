@@ -1,0 +1,31 @@
+﻿@using BookStoreMvc.Models;
+
+@model List<BookViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Book List</h1>
+<table>
+    <thead>
+        <tr>Hash<</tr>>
+        <tr>Name</tr>
+        <tr>Author</tr>
+        <tr>Rating</tr>
+        <tr>Price</tr>
+    </thead>
+        @foreach (BookViewModel book in Model)
+        {
+         <tr>
+            <td>@book.BookNumber</td>
+            <td>@book.Name</td>
+            <td>@book.Author</td>
+            <td>@book.Reiting</td>
+            <td>@book.Price</td>
+             <td>@Html.ActionLink("Remove", "RemoveBook" , "Book", new { number = book.BookNumber }, null)</td>
+             <td>@Html.ActionLink("Change", "UpdateBook" , "Book", new { number = book.BookNumber }, null)</td>
+
+         </tr>
+        }
+</table>
+@Html.ActionLink("Add new", "NewBook", "Book")

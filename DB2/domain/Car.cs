@@ -10,7 +10,7 @@ namespace DB2.domain
     public class Car
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
 
